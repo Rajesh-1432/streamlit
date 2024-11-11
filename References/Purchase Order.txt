@@ -1,0 +1,201 @@
+Supplier Master
+
+Supplier (vendor) master is the master data in SAP S/4 which stores all the data relevant to a supplier with whom the organization is having business transactions to meet the organization’s sourcing and procurement needs. 
+
+In SAP S/4, the Business Partner is the starting point for managing the supplier master data. 
+
+“Business Partners” are the external and internal parties that the company maintains a business relationship with. Business Partner is the leading object and single point of entry to maintain partners that serve as suppliers and/or customers. Business Partner centrally manages the master data for supplier and customer. 
+
+Business Partner being the SAP S/4 strategic object model, supports the following: 
+ 
+
+General data shared across different roles 
+Performs multiple roles like general BP, supplier, supplier (Financial Accounting), ship to party, bill to party, sold party etc. 
+Supports multiple addresses for the business partner 
+Helps in maintaining harmonized architecture for BP master data 
+Enables Customer and Vendor Integration (CVI) synchronizing the BP object and supplier/customer master data objects 
+
+The business partner is defined first and then the needed roles are assigned. The relevant data is maintained with each corresponding role.  
+
+
+The following roles are required for the business partners for the supplier master. 
+BP Role (000000): Business Partner (General): All the BP general data like name, address, search term, vendor language, telephone, e mails, bank details are maintained. This data is maintained at the client level. 
+BP Role (FLVN01): Supplier: All the purchase relevant data like order currency, payment term, inco term etc. are maintained with this role. These data are maintained at the purchase organization level. 
+BP Role (FLVN00) : Supplier (Fin. Accounting): All the finance/ AP relevant data like reconciliation account, payment term, payment method, duplicate invoice checks, are maintained with this role. This data is maintained at the company code level. 
+BP Role (BUP003): Vendor (Employee): All the relevant data for employee vendor are maintained with this role. 
+
+ 
+Note: The payment term maintained in the purchase organization level defaults in the purchase order. The payment term maintained at the company code level defaults when the AP invoice (without purchase order) is received from the vendor and posted. 
+
+Account group is the concept in SAP to group suppliers. The account group controls all the attributes of the supplier master template at the time of creation and at the time of change of the master data. Account group is the mandatory key at the time of creation of the supplier master. 
+
+The account group controls the following attributes for the supplier master. 
+
+ 
+
+Type of vendors (External, Intercompany, FI only, Employee vendor etc.) 
+Number range interval for the supplier master 
+Type of the number assignment (Internal vs. external) 
+Field selection (mandatory, optional, display only, or hidden) 
+Partner Schema (Ordering address, Invoicing party, Goods supplier etc.) 
+
+The business partner account group must be created first and should be linked with corresponding supplier account group. This assignment is done using Customer Vendor Integration (CVI). 
+ 
+
+The different types of supplier account groups with corresponding BP group, along with the appropriate number range, are shown in the tables at the end of this section. 
+ 
+
+The partner functions for the supplier master help to maintain multiple entities for a single business partner / legal entity. 
+
+ 
+Following are the partners functions configured for supplier for the Otsuka business. 
+Vendor (VN) 
+Ordering Address (OA) 
+Invoicing Party (PI) 
+
+The ordering address and invoicing party can be maintained separately and assigned to a main supplier. If the ordering address and invoicing party is not maintained separately, the supplier number is defaulted as ordering address and invoicing party. 
+
+The supplier master can be blocked based on business requirements.  The following types of blockages can be applied to the supplier master. 
+
+Central Block – The supplier master is blocked across all company codes and purchasing organizations 
+
+Purchasing Block – The supplier master is blocked for purchasing for one specific purchase organization or across all purchase organizations. 
+
+Company Code/ Posting Block – The supplier is blocked for one company code or all the company codes. 
+
+ 
+
+The supplier master can be blocked for deletion. The flag for deletion can be set for the following 
+
+Purchase Org deletion flag – The purchasing data can be flagged for deletion for specific purchase organization 
+
+Company Code deletion flag – The company code or finance data can be flagged for deletion for specific company code. 
+
+ 
+
+The supplier master can be archived by checking the archiving flag. During the archiving run, if this indicator is checked and there is no open business transaction (e.g. open purchase order, open receipt, open invoice, open payment/ balance), the master data is archived. 
+
+ 
+
+Note: The archiving set up is not done as part of ‘Project Elevate’ but can be leveraged in future steady state operation if archiving of the supplier master is needed. 
+
+
+Main test cases for the Supplier Master process, focusing on the crucial elements only:
+Supplier Master
+Test Case 1: Creating a Business Partner for Supplier Master Data
+Test Case 2: Maintaining General Data for Supplier (Name, Address, Contact Information)
+Test Case 3: Configuring Purchase Relevant Data for Supplier
+Test Case 4: Blocking Supplier Master Data (Central, Purchasing, Company Code)
+Test Case 5: Flagging Supplier Master Data for Deletion or Archiving
+
+
+
+----
+
+Supplier Master
+Test Cases for Supplier Master
+Test Case 1: Creating a Business Partner for Supplier Master Data
+Test Case 2: Maintaining General Data for Supplier (Name, Address, Contact Information)
+Test Case 3: Configuring Purchase Relevant Data for Supplier
+Test Case 4: Blocking Supplier Master Data (Central, Purchasing, Company Code)
+Test Case 5: Flagging Supplier Master Data for Deletion or Archiving
+Test Case 6: Validating Supplier Master Data Consistency
+Test Case 7: Testing Supplier Contact Information Update
+
+----
+
+Subcontracting Process
+Purpose 
+The subcontracting process is the process where the buyer provides the bulk, API and component materials to a contract manufacturer or packager for the outside manufacturing and packaging operations of semi-finished and finished products. The buyer pays the subcontractor for the service provided which includes labor, manufacturing, facility, technology and any additional items the subcontractor provides in order to produce the intended materials. 
+
+Currently OAPI and OCPI outsource their bulk manufacturing and packaging operations to external vendors. Both the entities buy the major bulk and component materials from external suppliers (including Otsuka Pharmaceutical Co. – Japan [OPCJ]) and these materials are directly shipped to the contract manufacturers and packagers. The packagers perform all packaging-related activities and the final finished goods are then shipped to the respective 3PL storage sites for OAPI and OCPI, which is followed by the supplier payment process in both the entities. 
+
+
+SAP Subcontracting process will be deployed for the following specific business cases for OAPI and OCPI 
+
+OAPI 
+
+Finished goods packaging 
+
+API granulation for BreathTek Kit 
+
+Bulk material pouching for BreathTek Kit 
+
+Kitting operation for BreathTek Kit 
+
+OCPI 
+
+Finished goods packaging 
+
+ 
+
+The finished goods packaging process is accomplished with following broad steps: 
+
+Procuring the bulk, API and other component materials from external suppliers and shipping those directly to the packager 
+
+Sending subcontracting purchase orders to the packager with the agreed upon subcontracting fee 
+
+After packaging, receiving the finished goods in the 3PL warehouse. 
+
+ 
+
+The BreathTek process for OAPI is accomplished with the following broad steps: 
+
+Purchase the API material from an external supplier and having it delivered directly to the contract manufacturer to produce the bulk material 
+
+Ship the bulk material directly to the packager 
+
+Send a separate subcontracting purchase order to the packager for bulk pouching and FG Kitting 
+
+Receive the final kits in the 3PL warehouse 
+
+ 
+
+All the above purchase requisitions shall be created automatically using S/4 ‘Material Requirement Planning’ (MRP) based on the finished good requirements which shall be entered manually as a S/4 ‘planned independent requirement’. The purchase requisitions shall be converted automatically to purchase orders by a scheduled batch job. If the requisition doesn’t have the source assigned, the manual conversion to Purchase Order is required. 
+
+ 
+
+This process is applicable for the pharmaceutical products for both OAPI (including BreathTek Kits for MDD) and OCPI. 
+
+Test Cases for Subcontracting Process
+Test Case 1: Automatic Creation of Purchase Requisitions for Bulk, API, and Component Materials through MRP based on Finished Goods Requirements
+Test Case 2: Verification of Conversion of Purchase Requisitions to Purchase Orders via Scheduled Batch Job
+Test Case 3: Manual Conversion of Purchase Requisitions to Purchase Orders when No Source is Assigned
+Test Case 4: Sending Subcontracting Purchase Orders to Contract Manufacturers and Packagers with Correct Fees
+Test Case 5: Receiving Finished Goods in 3PL Warehouse after Packaging Operations
+Test Case 6: Validation of Direct Shipping of Bulk and Component Materials to Contract Manufacturers and Packagers
+Test Case 7: Purchase and Delivery Verification of API Materials for BreathTek Kits to Contract Manufacturers
+Test Case 8: Receipt of Final Kits in 3PL Warehouse after Kitting Operations
+
+
+-----
+
+Intercompany Stock Transport Order (STO) Process
+
+Purpose 
+The Otsuka Patient Assistance Foundation (OPAF) is a nonprofit organization that provides eligible patients with prescribed Otsuka medication free of cost. The management of donated product and the distribution to patients is managed by 3rd party entity ‘Covance’.  
+
+
+Otsuka America Pharmaceutical Inc. (OAPI) is currently the sole donor of pharmaceutical finished goods to OPAF. Covance maintains certain inventory levels and provides OPAF with resupply requirements to maintain those levels. OPAF requests a donation of product from OAPI which is facilitated through an Intercompany Stock Transport Order (STO) in SAP. OAPI satisfies the donation request by notifying the 3PL warehouse to ship product directly to Covance. 
+
+
+The intercompany STO process represents a method for transferring materials from one plant to another plant when the supplying and receiving plants belong to different legal entities (Company Codes), within the same SAP instance. 
+ 
+
+The document type for the intercompany STO is different from the standard purchase order and hence it can be differentiated in multiple SAP standard reports. 
+
+
+Inventory distributions to patients and scrapping activities performed by Covance are transmitted to SAP through a periodic interface that adjusts the stock of OPAF. 
+
+
+This process is applicable only between OAPI and OPAF organizations.  
+
+
+Test Cases for Intercompany Stock Transport Order (STO) Process
+Test Case 1: Creation of Intercompany Stock Transport Order (STO) from OPAF Donation Request to OAPI
+Test Case 2: Verification of Notification to 3PL Warehouse for Shipping Product to Covance
+Test Case 3: Transfer of Inventory from OAPI Plant to Covance through Intercompany STO
+Test Case 4: Differentiation of Intercompany STO Document Type in SAP Standard Reports
+Test Case 5: Adjustment of OPAF Stock Levels Based on Inventory Distribution to Patients
+Test Case 6: Validation of Periodic Interface for Stock Adjustments Post Scrapping Activities by Covance
+Test Case 7: Verification of Resupply Requirements Maintained by Covance for OPAF

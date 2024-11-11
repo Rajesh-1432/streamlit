@@ -1,0 +1,357 @@
+Credit Memo/Debit Memo Request process
+
+Purpose 
+
+Credit /Debit Memo Request process represents billing corrections process. Credit /Debit Memo Request process starts with the receipt of a customer request, 3PL or Otsuka employee identifying billing corrections. Credit /Debit Memo Requests can be created with reference to existing invoice or without any reference as well. Order reason is mandatory for processing Credit /Debit Memo Request. 
+ 
+Once Credit /Debit Memo Request is created manually, it goes on automatic billing block, which needs to be reviewed and removed by relevant authority. Once Credit/ Debit memo request’s billing block is removed, it moves to Invoice management where actual Credit/ Debit memo is created and financial document is posted 
+
+This process is applicable for:
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+OAPI MDD – Medical Devices Division  (Sales Org A110) 
+This is US Medical Devices business. 
+OCPI - Otsuka Canada Pharmaceutical Inc (Sales Org A300) 
+This is Canada Pharma business. 
+
+
+Test Cases
+Test Case 1: Creating a Credit Memo Request with Invoice Reference
+Test Case 2: Creating a Credit Memo Request without Invoice Reference
+Test Case 3: Removing Billing Block from Credit Memo Request
+Test Case 4: Processing Debit Memo Request with Order Reason
+Test Case 5: Posting a Credit Memo Financial Document
+Test Case 6: Processing Credit/Debit Memo Request for US Pharma (Sales Org A100)
+Test Case 7: Processing Credit/Debit Memo Request for Canada Pharma (Sales Org A300)
+
+-----
+
+Scheduling Agreement
+
+Purpose  
+
+The Scheduling Agreement is one of the pre sales document created in S4 Hana for the agreement negotiated with the customer. The Scheduling Agreement will be created manually by the business user in S4 Hana system. 
+
+The Schedule Agreement will have the key parameters like, Sold to Customer, Ship to Customer, Material, validity dates, Scheduling Agreement Description, Agreed tier price, Payment terms, Shipping condition (Shipping method), Schedule lines with appropriate delivery dates. 
+ 
+This process is applicable for:  
+OAPI MDD (Sales org. A110) – Medical Devices Division   
+This is US Medical Devices business. 
+
+
+Test Cases for the same:
+Test Case 1: Creating a Scheduling Agreement Manually in S4 HANA
+Test Case 2: Validating Key Parameters in a Scheduling Agreement (e.g., Sold to Customer, Ship to Customer)
+Test Case 3: Editing an Existing Scheduling Agreement
+Test Case 4: Setting and Validating Validity Dates for a Scheduling Agreement
+Test Case 5: Adding Schedule Lines with Delivery Dates to a Scheduling Agreement
+Test Case 6: Specifying Agreed Tier Price and Payment Terms in a Scheduling Agreement
+Test Case 7: Assigning Shipping Conditions (e.g., Shipping Method) in a Scheduling Agreement
+Test Case 8: Verifying the Creation of a Scheduling Agreement for OAPI MDD (Sales org. A110)
+Test Case 9: Deleting a Scheduling Agreement
+Test Case 10: Copying an Existing Scheduling Agreement to Create a New One
+
+
+----
+
+
+Pricing
+
+Purpose 
+Price Management represents the process of identifying price changes/new price of materials , communicating internally to stakeholders, informing partners (3PL & Customers) before price changes take effect in the system and updating the price in the system. 
+
+This process is applicable for:  
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+OAPI MDD – Medical Devices Division  (Sales Org A110) 
+This is US Medical Devices business. 
+OCPI - Otsuka Canada Pharmaceutical Inc (Sales Org A300) 
+This is Canada Pharma business. 
+
+
+Here are the test cases based on the Pricing process:
+Test Case 1: Identifying Price Changes for Materials
+Test Case 2: Communicating Price Changes to Internal Stakeholders
+Test Case 3: Informing 3PL and Customers About Upcoming Price Changes
+Test Case 4: Updating the Price in the System for OAPI Pharma (Sales Org A100)
+Test Case 5: Updating the Price in the System for OAPI MDD (Sales Org A110)
+Test Case 6: Updating the Price in the System for OCPI (Sales Org A300)
+Test Case 7: Verifying Effective Dates for New Prices in the System
+Test Case 8: Generating Reports on Price Changes for Stakeholders
+Test Case 9: Archiving Previous Price Information
+Test Case 10: Validating that Price Changes are Reflected in Customer Quotes and Invoices
+
+
+----
+
+Trade Order
+
+Purpose 
+Trade Order represents a process for managing customer orders. It starts with the receipt of a customer request to purchase products via fax, email, phone or EDI.  
+
+
+This process includes the actions for the core sales order creation steps for a customer. The business process encompasses steps from the initial order entry, determining order type, followed by multiple order validation checks as applicable and includes: 
+- Pricing determination 
+- Price mismatch 
+- Credit check 
+- Inventory availability/ confirmation 
+- Duplicate purchase order check 
+- Tax determination 
+- Customer Partner functions ( e.g. Sold to, Ship to, Bill to, Payer etc)  determination 
+
+Order is blocked until all exceptions are resolved. Once order exceptions are resolved, order is saved, and order confirmation is sent to customer via email or EDI (based on the business requirement). Once order is complete, it moves through fulfillment. 
+
+
+This process is applicable for  
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+OAPI MDD – Medical Devices Division  (Sales Org A110) 
+This is US Medical Devices business. 
+OCPI - Otsuka Canada Pharmaceutical Inc (Sales Org A300) 
+This is Canada Pharma business.
+
+Main test cases for the Trade Order process:
+Test Case 1: Creating a Trade Order from Customer Request
+Test Case 2: Performing Pricing Determination for a Trade Order
+Test Case 3: Performing Credit Check for Trade Order
+Test Case 4: Confirming Inventory Availability for Trade Order
+Test Case 5: Resolving Order Exceptions Before Saving the Trade Order
+Test Case 6: Sending Order Confirmation to Customer
+Test Case 7: Managing Trade Order Fulfillment Process
+
+---
+
+Free of Charge Order
+Purpose 
+Free of Charge Order process describes the process of providing goods to a customer at no cost. Free of Charge order process starts with the receipt of a customer request for products via fax, email or EDI.  
+
+This process includes the actions for the core processes of Free of charge order creation for a customer. The business process encompasses steps from the initial order entry, determining order type, followed by multiple order validation checks as applicable and includes: 
+
+- Inventory availability/ confirmation 
+
+- Duplicate purchase order number check 
+
+- Customer Partner function determination 
+
+Each Free of Charge order created automatically using EDI is assigned a default order reason based on which it will be processed further and it will be put in delivery block. After, the system will perform order validations, when those are resolved, order will be saved and order confirmation will be sent to customer via email or EDI (based on the business requirement). Once order is complete, it moves for fulfillment. 
+
+
+This process is applicable for  
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+OCPI - Otsuka Canada Pharmaceutical Inc (Sales Org A300) 
+This is Canada Pharma business. 
+
+Main test cases for the Free of Charge Order process:
+Test Case 1: Creating a Free of Charge Order from Customer Request
+Test Case 2: Confirming Inventory Availability for Free of Charge Order
+Test Case 3: Checking for Duplicate Purchase Order Numbers
+Test Case 4: Determining Customer Partner Functions for Free of Charge Order
+Test Case 5: Handling Default Order Reason Assignment for EDI Orders
+Test Case 6: Resolving Order Validation Issues Before Saving the Free of Charge Order
+Test Case 7: Sending Order Confirmation to Customer
+
+Sample Order
+Purpose 
+Sample Order represents a process for managing Physician’s Sample and Special samples. Sample Order process starts with the receipt of a Physician’s requirement via VEEVA and Customer Service Representative’s request for special sample products. 
+
+The business process encompasses steps from the initial order entry, determining order type, followed by multiple order validation checks as applicable and includes: 
+- Inventory availability/ confirmation 
+- Duplicate purchase order check 
+- Customer Partner function determination 
+
+Sample Order s will be processed further and will be put in delivery block if validation fails. After those are resolved and if order is complete, it moves for fulfillment. 
+
+If needed; Specific Batch and Lot number will be assigned in Sample Order for order fulfilment. 
+
+
+This process is applicable for  
+OCPI - Otsuka Canada Pharmaceutical Inc (Sales Org A300) 
+This is Canada Pharma business 
+
+Main test cases for the Sample Order process:
+Test Case 1: Creating a Sample Order from Physician’s Requirement via VEEVA
+Test Case 2: Confirming Inventory Availability for Sample Order
+Test Case 3: Checking for Duplicate Purchase Order Numbers in Sample Order
+Test Case 4: Determining Customer Partner Functions for Sample Order
+Test Case 5: Handling Validation Failures and Applying Delivery Block
+Test Case 6: Assigning Specific Batch and Lot Numbers for Sample Order Fulfillment
+Test Case 7: Moving Sample Order for Fulfillment Once Completed
+
+
+Purpose 
+
+Demo/Direct Exchange Order process represents the following processes  
+Customer requests demo for Medical Device. The Field Sales Representative requests the demo on behalf of customer by email.  
+
+The Direct Exchange process is applicable for limited special customers wherein when the Customer Equipment needs repair, Otsuka might on certain circumstances offer them a Direct Exchange. A Free of Charge Equipment is sent Customer as Direct Exchange and the Customer Equipment is received back at Otsuka as Returns 
+
+The business process encompasses steps from the initial order entry, determining order type, followed by multiple order validation checks as applicable and includes: 
+- Duplicate purchase order check 
+- Customer Partner function determination 
+
+
+This process is applicable for  
+OAPI MDD – Medical Devices Division  (Sales Org A110) 
+This is US Medical Devices Division. 
+
+
+Main test cases for the Demo/Direct Exchange Order process:
+Test Case 1: Creating a Demo Order from Customer Request via Email
+Test Case 2: Initiating Direct Exchange Order for Customer Equipment Repair
+Test Case 3: Checking for Duplicate Purchase Order Numbers in Demo/Direct Exchange Order
+Test Case 4: Determining Customer Partner Functions for Demo/Direct Exchange Order
+Test Case 5: Processing Free of Charge Equipment for Direct Exchange
+Test Case 6: Handling Returns of Customer Equipment to Otsuka
+
+
+----
+Replacement Order
+Purpose 
+Replacement Order process describes the process of providing goods as a replacement to a customer at no cost. Replacement order process starts with the receipt of a customer complaint due to product quality issues (e.g. damaged products or other quality reasons) via fax, email.  
+
+This process is applicable for:  
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+
+
+Main test cases for the Replacement Order process:
+Test Case 1: Creating a Replacement Order from Customer Complaint
+Test Case 2: Validating Product Quality Issues Leading to Replacement Order
+Test Case 3: Confirming Inventory Availability for Replacement Order
+Test Case 4: Processing Replacement Order at No Cost to Customer
+
+
+----
+
+
+
+Customer Delivery
+Purpose 
+The outbound delivery is the document in SAP used to perform the distribution to the customer. This process design document covers the outbound delivery created for distributing to the external customer.  
+After the outbound delivery is created, it will be sent to the 3PL who manages the inventory on Otsuka’s behalf for distribution. The actual distribution to the external customer happens at the 3PL warehouse. So, the delivery documents created in SAP will be collectively sent to 3PL at frequent intervals during the day. Actual frequency will be decided later when the batch job is defined. 
+
+There is a cutoff time for the 3PL to receive the order. But delivery document should be sent to 3PL regardless of the cutoff time. So that the expedited deliveries can be managed by 3PL without any additional manual tasks. 
+
+After completing the shipment, 3PL sends the shipment confirmation interface to update the shipment information in the outbound delivery and perform the Post Goods Issue (PGI). 
+
+Most of the times, 3PL will pick the batch as per the FEFO logic. In some cases, business needs to ship specific batch to the customer. In this situation, the outbound delivery carries the batch number to be shipped to the 3PL via interface. 
+
+ 
+This process is applicable for  
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+OAPI MDD – Medical Devices Division  (Sales Org A110) 
+This is US Medical Devices business. 
+OCPI - Otsuka Canada Pharmaceutical Inc (Sales Org A300) 
+This is Canada Pharma business. 
+
+Customer Delivery Test Cases
+Test Case 1: Creating an Outbound Delivery Document
+Test Case 2: Sending Outbound Delivery Document to 3PL
+Test Case 3: Receiving Shipment Confirmation from 3PL
+Test Case 4: Validating Batch Selection Based on FEFO Logic
+Test Case 5: Updating Shipment Information in Outbound Delivery after Confirmation.
+
+-----
+
+
+Standard Invoice
+Purpose  
+The billing process starts when there is any sales order/Delivery document is due for billing. The billing document will be created with reference to delivery document after Post Good Issue (PGI) is completed. Invoice captures details from previous document such as pricing, customer partner functions (Sold to, Ship to, Payer, Bill to). Once all parameters are  verified and tax is calculated, it creates accounting document, which posts to Accounts Receivables and Revenue Accounts.  
+
+The billing document can be created in the following ways:   
+Processing a billing due list automatically as a background task for routine transactions (for example: every midnight)  
+Processing the billing due list manually based on the selection criteria entered for documents to be processed (e.g. billing date, customer, etc.), the system displays a list of documents from which the user can select for billing creation  
+Manually creating a billing document by explicitly specifying the delivery reference/sales order number  
+ 
+
+Standard Invoice process contains the following components:  
+Invoice creation from delivery  
+Transferring billing data to Financial Accounting  
+Cancel Billing transactions  
+
+ 
+
+When the billing document is saved, the system automatically posts entries to the appropriate accounts. It does this by first determining the account assignment for each entry, using the company code chart of accounts, sales organization, customer account assignment group, material account assignment group, and order reason account key.   
+
+Examples of the various account types that can be posted to are:  
+Accounts receivable  
+Revenue  
+Sales deduction  
+Accruals  
+
+
+This process is applicable for  
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+OAPI MDD – Medical Devices Division  (Sales Org A110) 
+This is US Medical Devices business. 
+OCPI - Otsuka Canada Pharmaceutical Inc (Sales Org A300) 
+This is Canada Pharma business. 
+
+Standard Invoice
+Test Case 1: Creating an Invoice from Delivery Document after PGI
+Test Case 2: Manually Processing Billing Due List Based on Selection Criteria
+Test Case 3: Manually Creating a Billing Document with Delivery Reference
+Test Case 4: Verifying Account Posting Entries for Billing Document
+Test Case 5: Cancelling a Billing Transaction and Verifying Impact
+
+-----
+
+Chargeback
+Purpose 
+Direct Customers purchase Pharma products from Otsuka at WAC price and sell them to some Indirect Customers at a different contracted price. Otsuka has contracts with these Indirect Customers. This contract information is shared with the 3PL and stored in the 3PL system based on input from Otsuka. When the Indirect Customer buys from the Otsuka Direct Customer at a contracted price, which is lower than the WAC price, the Direct Customer charges Otsuka for the difference in the form of Chargeback Credit. 
+
+The Direct Customer sends the Chargeback request to the 3PL, the 3PL reviews the request, finalizes the Chargeback and sends the information to Otsuka through EDI 844 to create Chargeback Credit/Debit Memo Request. Since the incoming Chargeback Credit is already reviewed and finalized, the Chargeback Credit/Debit Memo Request is not set for Billing Block. The Chargeback Credit/Debit Memo Request is invoiced to create the Credit/Debit Invoice and financial document is posted. 
+
+This process is applicable for  
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+
+Chargeback
+Test Case 1: Submitting Chargeback Request from Direct Customer to 3PL
+Test Case 2: Reviewing and Finalizing Chargeback Request by 3PL
+Test Case 3: Sending Chargeback Credit/Debit Memo Request to Otsuka via EDI 844
+Test Case 4: Creating Chargeback Credit/Debit Memo Request in Otsuka's System
+Test Case 5: Invoicing Chargeback Credit/Debit Memo Request to Generate Financial Document
+Test Case 6: Verifying Posting of Financial Document for Chargeback
+
+----
+
+Intercompany
+
+Purpose 
+Intercompany is the process of creating the transaction between the Otsuka affiliates. The Otsuka affiliates can be within the same SAP instance or different system instances. In both the cases the transaction between these entities are treated as intercompany transaction and the appropriate intercompany accounts will be posted. 
+
+There will be 2 types of intercompany process: 
+Intercompany process for external Otsuka affiliates – The Intercompany process between the Otsuka affiliates but in a different system instance. In this process, the Otsuka affiliates in the different instance will be considered as an external customer and will follow the customer sales process. This process will follow the  manual Intercompany order model of transaction (E.g., Sale to OPCJ  or Taiho) 
+
+Intercompany process for Internal Otsuka affiliates – The Intercompany process between the Otsuka affiliates in the same SAP instance but no stock movement between them. In this process, the Otsuka affiliates will be created as internal customer and will follow the customer sales process. This process will follow the PO-SO (Purchase order, Sales order) model of transaction (E.g., Sale to OPDC) 
+
+ 
+This process is applicable for:  
+OAPI Pharma - Otsuka America Pharmaceutical, Inc. (Sales Org A100) 
+This is US Pharma business. 
+
+
+Intercompany Test Cases
+Test Case 1: Creating Intercompany Transaction between Otsuka Affiliates in Different System Instances
+Test Case 2: Processing Manual Intercompany Order for External Affiliates
+Test Case 3: Creating Intercompany Transaction for Internal Otsuka Affiliates within the Same SAP Instance
+Test Case 4: Handling Purchase Order and Sales Order Model for Internal Intercompany Transactions
+Test Case 5: Posting to Appropriate Intercompany Accounts for Both External and Internal Transactions
+Test Case 6: Verifying Transaction Flow and Documentation for Intercompany Sales Process
+
+
+
+
+
+
+
+
+
+
+
+
+

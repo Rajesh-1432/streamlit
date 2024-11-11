@@ -1,0 +1,202 @@
+{
+    "Update Customer Master": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Customer Master\" App",
+            "3": "\nChange Business Partner \nEnter the Business Partner Number in Business partner tab\nClick on enter",
+            "4": "Select the Business partner and click on Right side arrow",
+            "5": "Change the fileds which we want to change like in General data, Sales and Company code data.\n\nFor Sales area data will select the sales area = S.Org+DistCh+Div,  and click on rightside arrow it will redirect to Sales area data.\n\nFor Company code data Select the company code XXXX  and click on right side arrow it will redirect to company code data\nSave "
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Customer Master Screen displays",
+            "3": "Business Partner is diplays in customers tab",
+            "4": " Customer Details Screen displays",
+            "5": "Changed Data will be saved"
+        }
+    },
+    "Create Customer Master": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Customer Master\" App",
+            "3": "Create New Business Partner  \nChoose Create by selecting Person/Organization\nClick on Organization",
+            "4": "In Create organization Screen Choose Internal numeric numbering  for standard use in Grouping filed\nClick on Ok",
+            "5": "Enter General Information Under Basic Data Tab\nEnter the following values in Basic data section \nName 1 : XXXXXXXX\nSearch Term 1: XXXXXXX",
+            "6": "Enter Address Data \nEnter the following values in the Address section:\nStreet : XXXX\nHouse Number: XX\nPostal Code: XXXX\nCity: XXXXX\nCountry:XX\nRegion: XX\nEnter the following values in Standard communication section\nLanguage: XX\nClick  Check in top will get Check for Potential Duplicates Screen displays\nAfter Click on Close",
+            "7": "Enter Roles - FLCU01 - Customer\nIn the Role section  enter BP role as FLCU01  to maintain Sales Area data \nUpon Selecting role Select \u201cSave \u201cOption",
+            "8": "Click on Sales Areas \nClick on Edit on top\nClick on Create in Sales Areas ",
+            "9": "Enter the \nSales Organization: XXXX\nDistribution Channel : XX\nDivision : XX\nEnter the following entries in\n\nSales Orders: \nSales office: NL01\nSales Group: NL1\nCurrency : EUR\n\nPricing and Statics:\nCust.Pricing.Procedure: X\nShipping: Delivering Plant: XXXX\nShipping Conditions:XXXXX\n\nBilling:\nIncoterms: XXX\nIncoterms Location 1:XXXXX\nPayment Terms : XXX\n\nAccounting: \nAccount Assmt Grp. Cust :XXXX\n\nClick On Apply\nClick On Save",
+            "10": "In the Role section  enter BP role as FLCU00  to maintain Company Code data \nSelect Role FLCU00  Click on Save",
+            "11": "Click on Edit on top\nClick on Company Codes \nSelct the line and click on ritgh Arrow",
+            "12": "Enter the  Company Code 1025\nReconciliation Account XXXXXX\nPayment Terms XXXX\n\nClick on Apply\nClick on Save"
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Customer Master Screen displays",
+            "3": "Create Organization Screen displays",
+            "4": "New Customer Creation Screen displays",
+            "5": "General Information is added with relevant details like Customer name & Search term",
+            "6": "Address Details are added with relevant details like Steet, Postal Code, City, Country , Email etc..",
+            "7": "Business Partner is Created with General data",
+            "8": " New Sales Area Screen displays",
+            "9": "Sales Organization data is added with relevant details like Order Currency, Payment Terms, Planned Delivery time, Inco terms etc..",
+            "10": "Business Partner is saved  with FLCU00 Role",
+            "11": "New Company Code Screen Displays",
+            "12": "Company Code data is saved with relevant Information"
+        }
+    },
+    "Intracompany STO": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Create Purchase Order\" App",
+            "3": "In the purchase order app, click on \"Create\" to start a new PO.\nChoose the document type that corresponds to intracompany or stock transport orders (STO).\n\nUnder General Information, enter:\n\n<Purchase Group>\n<Purchase Org>\n<Company Code>\n<Supplier> (Select the supplier from the internal master data.)\n\nAt Item Level enter,\n<Material No>\n<Quantity>\n<Plant> (Enter the receiving plant (the plant that will receive the goods).\n<Delivery Dt>\n",
+            "4": "Verify account assignment details, such as cost centers or internal orders if necessary.\nDouble-check all fields for correctness and completeness.",
+            "5": "Once all the information is entered correctly, SAVE the PO. This will generate a purchase order document number for reference",
+            "6": "If  approval process, then the PO will be routed to the appropriate parties for approval before processing."
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Purchase Order for STO",
+            "3": "Enter the required  data",
+            "4": "Validation",
+            "5": "STO  XXXXXXXX Created",
+            "6": "Approval Process"
+        }
+    },
+    "Free of Charge Order": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Order Creation\" App",
+            "3": "Enter required data\nSales Document type :XXX (free of charge)\nSales Organization : XXXX\nDistribution Channel: XX\nDivision: XX\nClick Continue\n",
+            "4": "Enter the Sold-to Party :XXXXXX\nEnter the Customer Refernce : XXXXXXXXXX\nEnter the requested delivery date: : DD.MM.YYYY (future Delivery date)\nEnter the Material : XXXXXXXXX\nOrder Quantity : XX\n\nCheck below entries \nIncoterms: XXX\nShipping Conditions : XX\nCondition types Gross price (PR00) :0000 \n is displayed for free of charge\nOn the Schedule lines tab check the delivery date : DD.MM.YYYY\nCheck Incompletion Log and provide details as required\nPress Save",
+            "5": "Sales Order Acknowledgement should trigger if applicable to send to customer at SAVE"
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Sales Order Creation Tile ",
+            "3": " Standard Order: Overview screen displays",
+            "4": "In schedule lines, shipping tab you can see\n Delivery Date: XX.XX.XXXX\n Goods issue date: XX.XX.XXXX\nSales Order Created",
+            "5": "Sales Order Acknowledgement is sent to customer"
+        }
+    },
+    "Sample Order": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Order Creation\" App",
+            "3": "Enter required data\nSales Document type :XXX (for Samples)\nSales Organization : XXXX\nDistribution Channel: XX\nDivision: XX\nClick Continue\n",
+            "4": "Enter the Sold-to Party :XXXXXX\nEnter the Customer Refernce : XXXXXXXXXX\nEnter the requested delivery date: : DD.MM.YYYY (future Delivery date)\nEnter the Material : XXXXXXXXX\nOrder Quantity : XX\n\nCheck below entries \nIncoterms: XXX\nShipping Conditions : XX\nCondition types Gross price (PR00) :0000 \n is displayed for free of charge\nOn the Schedule lines tab check the delivery date : DD.MM.YYYY\nCheck Incompletion Log and provide details as required\nPress Save",
+            "5": "Sales Order Acknowledgement should trigger if applicable to send to customer at SAVE"
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Sales Order Creation",
+            "3": " Standard Order: Overview screen displays",
+            "4": "In schedule lines, shipping tab you can see\n Delivery Date: XX.XX.XXXX\n Goods issue date: XX.XX.XXXX\nSample Sales Order Created",
+            "5": "Sales Order Acknowledgement is sent to customer"
+        }
+    },
+    "Standard Invoice": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Billing Document\" App",
+            "3": "Enter required data\nDelivery : XXXXXXXX\nBilling Type : XXX\nPress Execute ",
+            "4": "\nSave the Billing Document",
+            "5": "Invoice document XXXXXXXX output is  sent to customer"
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Billing Document Tile",
+            "3": "Create Billing Document Screen displays",
+            "4": "Billing Document is created and the Billing number is displayed at bottom\n XXXXXXXX",
+            "5": "Invoice document XXXXXXXX is generated and sent to customer"
+        }
+    },
+    "Credit Memo Creation": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Credit Memo\" App",
+            "3": "Once inside the Create Credit Memo app:\n\nYou will see an option to create a credit memo with reference to an existing billing document.\n\nSelect the Billing Document option, and enter the billing document number you want to reference.\n\nHit Enter",
+            "4": "Modify the credit memo details if needed, such as changing the quantity, price adjustments, or specific line items.\nYou can also enter any relevant credit memo reasons or adjust any other terms.",
+            "5": "ave and Post the credit memo directly if you have the necessary authorization."
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Manage Credit Memo Requests  tile",
+            "3": "Credit Memo creation screen",
+            "4": "Credit Memo creation screen",
+            "5": "Credit Memo XXXXXXXX is created"
+        }
+    },
+    "Debit Memo Creation": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Debit Memo Request\" App",
+            "3": "Once inside the Create Debit  Memo app:\n\nChoose to create the debit memo based on a Sales Order or Billing Document (depending on the situation).\nEnter the sales order or billing document number as a reference.\n\nHit Enter",
+            "4": "Modify specific fields if necessary (e.g., quantity, price, or additional charges).\nEnter the reason for creating the debit memo (optional but often useful for reporting).",
+            "5": "Ensure that pricing, tax, and other financial details are accurate.\nMake any necessary adjustments to line items or pricing conditions.",
+            "6": "Submit the debit memo for approval (if your company requires an approval process), or\nSave and Post the debit memo directly if no approval is required."
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Debit Memo Request",
+            "3": "Debit Memo creation screen",
+            "4": "Debit Memo creation screen",
+            "5": "Debit Memo creation screen",
+            "6": "Debit Memo XXXXXXXX saved"
+        }
+    },
+    "Purchase Requisition Process": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Create Purchase Requistion\" App",
+            "3": "In the Create Purchase Requisition app, enter,\n<Material Number>\n<Valuation Price>\n<Currency>\n<Quantity>\n<Delivery Date>\n<Purchase Group>\n<Purchase Org>\n<Company Code>\n<Plant>\n<Country>\n\nSAVE",
+            "4": "Save the data"
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Purchase Requestion App",
+            "3": "Enter the required material data",
+            "4": "Purchase Requesition XXXXXXXXXX saved"
+        }
+    },
+    "Purchase Order Processing": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Create Purchase Order\" App",
+            "3": "Under General Information, enter:\n\n<Purchase Group>\n<Purchase Org>\n<Company Code>\n<Purchase Doc Type> (Std PO)\n<Currency>\n<Supplier>\n\nAt Item Level\n<Material No>\n<Quantity>\n<Plant>\n<Item Category> (not applicable for STD)\n<Account Category> (not applicable for STD)\n\nCheck Goods Receipt, Invoice Receipt, Confirmation Control, \nEntery any Text at line item level\n\nSAVE\n",
+            "4": "Save the data"
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Purchase Order",
+            "3": "Enter the required  data",
+            "4": "Purchase Order XXXXXXXXXX created"
+        }
+    },
+    "Sub-Contracting": {
+        "Step Description": {
+            "1": "Login to SAP Fiori\nLog on  to Fiori launch pad and using  the below URL with login credentials",
+            "2": "Access the App\nAccess \"Create Purchase Order\" App",
+            "3": "Under General Information, enter:\n\n<Purchase Group>\n<Purchase Org>\n<Company Code>\n<Purchase Doc Type> (Std PO)\n<Currency>\n<Supplier>\n\nAt Item Level enter,\n<Material No>\n<Quantity>\n<Plant>\n<Delivery Dt>\n\nSelect the correct item category\n<Item Category> (Consignment (K), Subcontract (L), Third-party (S) )\n",
+            "4": "After entering the material details, click on the Components tab (accessible via the Item Overview or under the Item Details section).\n\nAdd the Raw Materials (components) that will be sent to the vendor for processing. These are the materials provided by you, which the vendor will use to manufacture or assemble the finished product.\n\nEnter the Quantity of each component and check for accurate BOM (Bill of Materials).",
+            "5": "In the Conditions tab, enter the Net Price for the subcontracting service provided by the vendor.\n\nAdd any relevant Discounts, Freight Costs, or Surcharges as applicable.",
+            "6": "Check the Account Assignment (e.g., Cost Center, Asset, etc.) if you need to charge the purchase to a specific account.\n\nTypically, in subcontracting, the raw materials are issued from stock, so account assignment may not always be needed unless it's a specific business requirement.",
+            "7": "Use the Check button to validate the Purchase Order for any missing or incorrect data.\nCorrect any issues flagged by the system.",
+            "8": "Once everything is correct, click the Save button.",
+            "9": "Issue Components to Vendor: After the PO is created, raw materials need to be issued to the vendor via a stock transfer (movement type 541 in the MB1B transaction or MIGO in newer versions).",
+            "10": "Monitor Goods Receipt: Once the vendor processes the materials, perform a Goods Receipt for the finished product using MIGO, and the system will automatically consume the raw materials based on the subcontracting process."
+        },
+        "Expected Results": {
+            "1": "SAP Fiori Launchpad is displayed",
+            "2": "Purchase Order",
+            "3": "Enter the required  data",
+            "4": "Material details entered",
+            "5": "Price Conditions entered",
+            "6": "Account Assignment entered",
+            "7": "Perform Simulation",
+            "8": "Purchase Order XXXXXXXX Created",
+            "9": "Components issued to vendor",
+            "10": "Check goods receipts"
+        }
+    }
+}
