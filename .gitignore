@@ -1,2 +1,4 @@
 .env
 Generated Excels
+__pycache__
+faiss_index/*
